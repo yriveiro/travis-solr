@@ -39,8 +39,8 @@ download() {
             ;;
     esac
 
-    echo "Downloading Solr from $1 ..."
-    curl -s $1 | tar xz
+    echo "Downloading Solr from $url ..."
+    curl -s $url | tar xz
     echo "Downloaded."
 }
 
