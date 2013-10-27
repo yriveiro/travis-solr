@@ -4,7 +4,7 @@ download() {
     case $1 in
         4.0.0)
             url="http://archive.apache.org/dist/lucene/solr/4.0.0/apache-solr-4.0.0.tgz"
-            dir_name="apache-solr-4.0.0"
+            dir_name="solr-4.0.0"
             dir_conf="collection1/conf/"
             ;;
         4.1.0)
@@ -59,7 +59,7 @@ wait_for_solr(){
 run() {
     echo "Starting solr ..."
 
-    cd $1/example
+    cd $dir_name/example
 
     if [ $DEBUG ]
     then
