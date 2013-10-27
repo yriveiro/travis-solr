@@ -1,6 +1,44 @@
 #!/usr/bin/env bash
 
 download() {
+    case $1 in
+        4.0.0)
+            url="http://archive.apache.org/dist/lucene/solr/4.0.0/apache-solr-4.0.0.tgz"
+            dir_name="apache-solr-4.0.0"
+            dir_conf="collection1/conf/"
+            ;;
+        4.1.0)
+            url="http://archive.apache.org/dist/lucene/solr/4.1.0/solr-4.1.0.tgz"
+            dir_name="solr-4.1.0"
+            dir_conf="collection1/conf/"
+            ;;
+        4.2.0)
+            url="http://archive.apache.org/dist/lucene/solr/4.2.0/solr-4.2.0.tgz"
+            dir_name="solr-4.2.0"
+            dir_conf="collection1/conf/"
+            ;;
+        4.2.1)
+            url="http://archive.apache.org/dist/lucene/solr/4.2.1/solr-4.2.1.tgz"
+            dir_name="solr-4.2.1"
+            dir_conf="collection1/conf/"
+            ;;
+        4.4.0)
+            url="http://archive.apache.org/dist/lucene/solr/4.4.0/solr-4.4.0.tgz"
+            dir_name="solr-4.4.0"
+            dir_conf="collection1/conf/"
+            ;;
+        4.5.0)
+            url="http://archive.apache.org/dist/lucene/solr/4.5.0/solr-4.5.0.tgz"
+            dir_name="solr-4.5.0"
+            dir_conf="collection1/conf/"
+            ;;
+        4.5.1)
+            url="http://archive.apache.org/dist/lucene/solr/4.5.1/solr-4.5.1.tgz"
+            dir_name="solr-4.5.1"
+            dir_conf="collection1/conf/"
+            ;;
+    esac
+
     echo "Downloading Solr from $1 ..."
     curl -s $1 | tar xz
     echo "Downloaded."
@@ -49,4 +87,4 @@ check_version() {
 
 check_version $SOLR_VERSION
 download $SOLR_VERSION
-run $SOLR_VERSION
+#run $SOLR_VERSION
