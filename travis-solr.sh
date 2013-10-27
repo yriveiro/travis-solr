@@ -63,9 +63,9 @@ run() {
 
     if [ $DEBUG ]
     then
-        java -Dbootstrap_confdir=./solr/collection1/conf -Dcollection.configName=default -DzkRun -DnumShards=2 -jar start.jar &
+        java -Dbootstrap_confdir=./solr/collection1/conf -Dcollection.configName=default -DzkRun -DnumShards=2 -DmaxShardsPerNode=2 -jar start.jar &
     else
-        java -Dbootstrap_confdir=./solr/collection1/conf -Dcollection.configName=default -DzkRun -DnumShards=2 -jar start.jar  > /dev/null 2>&1 &
+        java -Dbootstrap_confdir=./solr/collection1/conf -Dcollection.configName=default -DzkRun -DnumShards=2 -DmaxShardsPerNode=2 -jar start.jar  > /dev/null 2>&1 &
     fi
 
     wait_for_solr
