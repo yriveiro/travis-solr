@@ -87,4 +87,4 @@ check_version() {
 
 check_version $SOLR_VERSION
 download $SOLR_VERSION
-#run $SOLR_VERSION
+run $SOLR_VERSION
