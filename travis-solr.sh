@@ -44,7 +44,7 @@ download() {
             ;;
         4.6.1)
             url="http://archive.apache.org/dist/lucene/solr/4.6.1/solr-4.6.1.tgz"
-            dir_name="solr-4.6.0"
+            dir_name="solr-4.6.1"
             dir_conf="collection1/conf/"
             ;;
     esac
