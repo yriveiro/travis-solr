@@ -42,6 +42,11 @@ download() {
             dir_name="solr-4.6.0"
             dir_conf="collection1/conf/"
             ;;
+        4.6.1)
+            url="http://archive.apache.org/dist/lucene/solr/4.6.1/solr-4.6.1.tgz"
+            dir_name="solr-4.6.0"
+            dir_conf="collection1/conf/"
+            ;;
     esac
 
     echo "Downloading Solr from $url ..."
@@ -82,7 +87,7 @@ run() {
 
 check_version() {
     case $1 in
-        4.0.0|4.1.0|4.2.0|4.2.1|4.4.0|4.5.0|4.5.1|4.6.0);;
+        4.0.0|4.1.0|4.2.0|4.2.1|4.4.0|4.5.0|4.5.1|4.6.0|4.6.1);;
         *)
             echo "Sorry, $1 is not supported or not valid version."
             exit 1
