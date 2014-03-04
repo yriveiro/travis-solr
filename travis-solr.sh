@@ -48,7 +48,7 @@ download() {
             dir_conf="collection1/conf/"
             ;;
         4.7.0)
-            url="http://archive.apache.org/dist/lucene/solr/4.7.0/solr-4.7.0.tgz"
+            url="http://mirrors.fe.up.pt/pub/apache/lucene/solr/4.7.0/solr-4.7.0.tgz"
             dir_name="solr-4.7.0"
             dir_conf="collection1/conf/"
             ;;
