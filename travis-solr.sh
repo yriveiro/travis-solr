@@ -3,53 +3,13 @@
 download() {
     case $1 in
         4.0.0)
-            url="http://archive.apache.org/dist/lucene/solr/4.0.0/apache-solr-4.0.0.tgz"
+            url="http://archive.apache.org/dist/lucene/solr/$1/apache-solr-$1.tgz"
             dir_name="solr-4.0.0"
             dir_conf="collection1/conf/"
             ;;
-        4.1.0)
-            url="http://archive.apache.org/dist/lucene/solr/4.1.0/solr-4.1.0.tgz"
-            dir_name="solr-4.1.0"
-            dir_conf="collection1/conf/"
-            ;;
-        4.2.0)
-            url="http://archive.apache.org/dist/lucene/solr/4.2.0/solr-4.2.0.tgz"
-            dir_name="solr-4.2.0"
-            dir_conf="collection1/conf/"
-            ;;
-        4.2.1)
-            url="http://archive.apache.org/dist/lucene/solr/4.2.1/solr-4.2.1.tgz"
-            dir_name="solr-4.2.1"
-            dir_conf="collection1/conf/"
-            ;;
-        4.4.0)
-            url="http://archive.apache.org/dist/lucene/solr/4.4.0/solr-4.4.0.tgz"
-            dir_name="solr-4.4.0"
-            dir_conf="collection1/conf/"
-            ;;
-        4.5.0)
-            url="http://archive.apache.org/dist/lucene/solr/4.5.0/solr-4.5.0.tgz"
-            dir_name="solr-4.5.0"
-            dir_conf="collection1/conf/"
-            ;;
-        4.5.1)
-            url="http://archive.apache.org/dist/lucene/solr/4.5.1/solr-4.5.1.tgz"
-            dir_name="solr-4.5.1"
-            dir_conf="collection1/conf/"
-            ;;
-        4.6.0)
-            url="http://archive.apache.org/dist/lucene/solr/4.6.0/solr-4.6.0.tgz"
-            dir_name="solr-4.6.0"
-            dir_conf="collection1/conf/"
-            ;;
-        4.6.1)
-            url="http://archive.apache.org/dist/lucene/solr/4.6.1/solr-4.6.1.tgz"
-            dir_name="solr-4.6.1"
-            dir_conf="collection1/conf/"
-            ;;
-        4.7.0)
-            url="http://mirrors.fe.up.pt/pub/apache/lucene/solr/4.7.0/solr-4.7.0.tgz"
-            dir_name="solr-4.7.0"
+        *)
+            url="http://archive.apache.org/dist/lucene/solr/$1/solr-$1.tgz"
+            dir_name="solr-$1"
             dir_conf="collection1/conf/"
             ;;
     esac
@@ -92,7 +52,7 @@ run() {
 
 check_version() {
     case $1 in
-        4.0.0|4.1.0|4.2.0|4.2.1|4.4.0|4.5.0|4.5.1|4.6.0|4.6.1|4.7.0);;
+        4.0.0|4.1.0|4.2.0|4.2.1|4.4.0|4.5.0|4.5.1|4.6.0|4.6.1|4.7.0|4.7.1|4.7.2|4.8.0|4.8.1|4.9.0);;
         *)
             echo "Sorry, $1 is not supported or not valid version."
             exit 1
