@@ -16,11 +16,11 @@ download() {
 }
 
 up(){
-    bash ./install_solr_service.sh "solr-$1.tgz" -u solr
+    bash "solr-$1"/bin/solr -e -cloud -noprompt
 }
 
 unpacking() {
-    tar xzf "solr-$1.tgz" "solr-$1/bin/install_solr_service.sh" --strip-components=2
+    tar xzf "solr-$1.tgz"
 }
 
 check_version() {
@@ -41,3 +41,4 @@ check_version() {
 check_version "$SOLR_VERSION"
 download "$SOLR_VERSION"
 unpacking "$SOLR_VERSION"
+up "$SOLR_VERSION"
