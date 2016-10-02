@@ -9,5 +9,5 @@ How use it
 
 ```bash
 before_script:
-  - curl -s  https://raw.github.com/yriveiro/travis-solr/master/install.sh | SOLR_VERSION=6.2.1 bash
+  - curl -s https://raw.githubusercontent.com/yriveiro/travis-solr/master/install.sh | SOLR_VERSION=6.2.1 bash
 ```
