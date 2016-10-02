@@ -16,7 +16,7 @@ download() {
 }
 
 up(){
-    bash "solr-$1"/bin/solr -e -cloud -noprompt
+    bash "solr-$1"/bin/solr -e cloud -noprompt
 }
 
 unpacking() {
