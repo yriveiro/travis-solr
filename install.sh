@@ -30,7 +30,7 @@ check_version() {
         exit 1
     fi
 
-    case $1 in 6.0.0|6.0.1|6.1.0|6.2.0|6.2.1);;
+    case $1 in 6.0.0|6.0.1|6.1.0|6.2.0|6.2.1|6.3.0);;
         *)
             echo "Sorry, $1 is not supported or not valid version."
             exit 1
